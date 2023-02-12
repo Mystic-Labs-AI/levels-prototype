@@ -20,9 +20,8 @@ from langchain.chains.conversation.memory import ConversationBufferMemory, Conve
 import streamlit as st
 from streamlit_chat import message as st_message
 # get API key from top-right dropdown on OpenAI website
-openai.api_key = "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"
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["GOOGLE_API_KEY"] = "60b957f06d517725a223526c1ecd5d39cb2efd953f92675a39fa322bb17f7979"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 pincone_key = st.secrets["PINCONE"]
 st.set_page_config(page_title= "Levels Prototype", page_icon="✨" , layout="centered", initial_sidebar_state="auto", menu_items=None)

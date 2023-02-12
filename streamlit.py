@@ -62,7 +62,7 @@ summary_memory = ConversationSummaryMemory(llm=OpenAI(), input_key="input")
 embed_model = "text-embedding-ada-002"
 
 
-pinecone.init(api_key="9b3306ed-98ca-4655-855f-d5591524d4ab", environment="us-east1-gcp")
+pinecone.init(api_key=pincone_key, environment="us-east1-gcp")
 
 history=[
     {
